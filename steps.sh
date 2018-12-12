@@ -24,6 +24,7 @@ openssl pkcs12 -export -inkey conjur-master.key -in conjur-conjurpoc.pem -out co
 # 9 Configure the Jenkins instance and provide the Conjur account, the Conjur URL and both Conjur Identity and Certificate credentials [Manual]
 
 # 10 Create a pipeline that will use the Conjur secret [Manual]
+cat ./Jenkinsfile
 
 # 11 Make sure that the Jenkins container can resolve the Conjur URL
 docker exec -it -u root jenkins bash -c "echo '$conjur-master-ip conjur-master' >> /etc/hosts"
