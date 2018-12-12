@@ -1,5 +1,7 @@
 #! /bin/bash
 
+. ./vars.sh
+
 # 1 Launch the Jenkins container
 docker run -d -p 8090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home --name jenkins jenkins/jenkins:lts
 
@@ -24,7 +26,7 @@ openssl pkcs12 -export -inkey conjur-master.key -in conjur-conjurpoc.pem -out co
 # 10 Create a pipeline that will use the Conjur secret [Manual]
 
 # 11 Make sure that the Jenkins container can resolve the Conjur URL
-docker exec -it -u root jenkins bash -c "echo '35.180.114.66 conjur-master' >> /etc/hosts"
+docker exec -it -u root jenkins bash -c "echo '$conjur-master-ip conjur-master' >> /etc/hosts"
 
 # 12 Launch the pipeline
 
