@@ -1,6 +1,8 @@
 # conjur-jenkins-demo
 Demonstration of the use of Conjur plugin for Jenkins
 
+https://docs.conjur.org/Latest/en/Content/Integrations/jenkins.htm
+
 https://github.com/cyberark/conjur-credentials-plugin
 
 ## How it works 
