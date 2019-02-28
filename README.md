@@ -17,4 +17,5 @@ Variables should be set in the file vars.sh
 
 ## Versions
 conjur-credentials-plugin: v0.5
+
 jenkins/jenkins:lts (v2.138.3)
